@@ -3,5 +3,5 @@ export interface Phones {
   name: string;
   company:string;
   storage:number;
-  type?:string;
+  smartPhone?:boolean;
 }
