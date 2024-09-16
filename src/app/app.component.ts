@@ -12,7 +12,7 @@ export class AppComponent {
   title = 'Sultan-AlShamsi-Learning-Angular';
 
   fName:string = "Sultan"
-  lName:string = "Al Shamsi "
+  lName:string = "Al Shamsi"
 
 
 }
