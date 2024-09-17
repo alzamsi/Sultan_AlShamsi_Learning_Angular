@@ -1,22 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Assignment 1</title>
+  <title>Assignment 2</title>
 </head>
 <body>
 <div class="container">
-  <div *ngFor = "let phones of phonesList">
-<h2>Phones List</h2>
-    <p>{{phones.id}}</p>
-    <p>{{phones.name}}</p>
-    <p>{{phones.company}}</p>
-    <p>{{phones.storage}}</p>
-    <p>{{phones.smartPhone}}</p>
-
-
-</div>
+  <h2>Phones List</h2>
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Company</th>
+      <th>Storage (GB)</th>
+      <th>Smartphone</th>
+    </tr>
+    <tr *ngFor="let phone of phonesList">
+      <td>{{ phone.id }}</td>
+      <td>{{ phone.name }}</td>
+      <td>{{ phone.company }}</td>
+      <td>{{ phone.storage }}</td>
+      <td *ngIf="phone.smartPhone">Yes</td>
+      <td *ngIf="!phone.smartPhone">No</td>
+    </tr>
+  </table>
 </div>
 </body>
+
 </html>

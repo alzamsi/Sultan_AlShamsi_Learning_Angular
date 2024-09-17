@@ -1,0 +1,45 @@
+/* Add some padding around the container */
+.container {
+  margin: 20px;
+}
+
+/* Style the table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+/* Style table headers */
+th {
+  background-color: #f2f2f2;
+  color: #333;
+  text-align: left;
+  padding: 12px;
+  border-bottom: 2px solid #ddd;
+}
+
+/* Style table rows */
+td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Hover effect for table rows */
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Alternate row background color for readability */
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Add some spacing between elements */
+h2 {
+  margin-bottom: 10px;
+}
+
+p {
+  margin: 5px 0;
+}
