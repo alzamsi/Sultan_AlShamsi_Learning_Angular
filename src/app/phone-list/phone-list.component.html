@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Assignment 3</title>
 </head>
+
 <body>
 <div class="container">
   <h2>Phones List</h2>
@@ -17,7 +18,7 @@
       <th>Storage (GB)</th>
       <th>Smartphone</th>
     </tr>
-    <tr *ngFor="let phone of phonesList">
+    <tr *ngFor="let phone of phones-list" (click)="selectPhone(phone)">
       <td>{{ phone.id }}</td>
       <td>{{ phone.name }}</td>
       <td>{{ phone.company }}</td>
@@ -26,6 +27,8 @@
       <td *ngIf="!phone.smartPhone">No</td>
     </tr>
   </table>
+  <app-phone-list-item-detail [phone]="selectedPhone">
+  </app-phone-list-item-detail>
 </div>
 </body>
 
