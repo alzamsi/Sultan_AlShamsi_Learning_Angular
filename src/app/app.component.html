@@ -7,27 +7,7 @@
   <title>Assignment 3</title>
 </head>
 <body>
-<div class="container">
-  <h2>Phones List</h2>
-  <table>
-    <tr>
-      <th>ID</th>
-      <th>Name</th>
-      <th>Company</th>
-      <th>Storage (GB)</th>
-      <th>Smartphone</th>
-    </tr>
-    <tr *ngFor="let phone of phonesList">
-      <td>{{ phone.id }}</td>
-      <td>{{ phone.name }}</td>
-      <td>{{ phone.company }}</td>
-      <td>{{ phone.storage }}</td>
-      <td *ngIf="phone.smartPhone">Yes</td>
-      <td *ngIf="!phone.smartPhone">No</td>
-    </tr>
-  </table>
-</div>
-
+   <h1>{{title}}</h1>
 <app-phone-list></app-phone-list>
 </body>
 

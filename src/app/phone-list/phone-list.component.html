@@ -8,26 +8,18 @@
 </head>
 
 <body>
-<div class="container">
-  <h2>Phones List</h2>
-  <table>
-    <tr>
-      <th>ID</th>
-      <th>Name</th>
-      <th>Company</th>
-      <th>Storage (GB)</th>
-      <th>Smartphone</th>
+<div style="border: 2px solid;">
+  <table>z
+    <tbody>
+    <tr *ngFor="let phone of phoneList" (click)="selectPhone(phone)">
+      <td>{{phone.company}}</td>
+      <td>{{phone.storage}}</td>
+      <td>{{phone.smartPhone ? 'Yes' : 'No'}}</td>
+      <td>{{phone.id}}</td>
+      <td>{{phone.name}}</td>
     </tr>
-    <tr *ngFor="let phone of phones-list" (click)="selectPhone(phone)">
-      <td>{{ phone.id }}</td>
-      <td>{{ phone.name }}</td>
-      <td>{{ phone.company }}</td>
-      <td>{{ phone.storage }}</td>
-      <td *ngIf="phone.smartPhone">Yes</td>
-      <td *ngIf="!phone.smartPhone">No</td>
-    </tr>
+    </tbody>
   </table>
- <app-phone-list-item *ngFor="let item of contentItems"[item]="item"></app-phone-list-item>
 </div>
 </body>
 

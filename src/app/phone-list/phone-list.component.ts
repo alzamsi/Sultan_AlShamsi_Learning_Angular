@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {Phones} from "../phones";
 
 
 
@@ -11,7 +12,8 @@ import { Component } from '@angular/core';
 })
 export class PhoneListComponent {
 
-  phoneList:  Phones[] = [...]
+  // @ts-ignore
+  phoneList:  Phones[] = []
 //Catch the onclick event from the html
   selectedPhone?: Phones;
 
