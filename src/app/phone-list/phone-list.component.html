@@ -27,8 +27,7 @@
       <td *ngIf="!phone.smartPhone">No</td>
     </tr>
   </table>
-  <app-phone-list-item-detail [phone]="selectedPhone">
-  </app-phone-list-item-detail>
+ <app-phone-list-item *ngFor="let item of contentItems"[item]="item"></app-phone-list-item>
 </div>
 </body>
 

@@ -2,16 +2,17 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { Phones } from './phones';
+import {PhoneListComponent} from "./phone-list/phone-list.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, CommonModule],
+  imports: [RouterOutlet, CommonModule, PhoneListComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Assignment 2';
+  title = 'Assignment 3';
 
   phonesList: Phones[] = [
     { id: 1, name: "Iphone 15 Pro Max", company: "Apple", storage: 256, smartPhone: true },

@@ -1,4 +1,5 @@
 import {Component, Input} from '@angular/core';
+import {Phones} from "../phones";
 
 @Component({
   selector: 'app-phone-list-item',
@@ -8,6 +9,6 @@ import {Component, Input} from '@angular/core';
   styleUrl: './phone-list-item.component.css'
 })
 export class PhoneListItemComponent {
-  @Input() phone?:Phones;
+  @Input() item?:Phones;
 
 }
