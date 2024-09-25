@@ -1,14 +1,14 @@
-import {Component, Input} from '@angular/core';
-import {Phones} from "../phones";
+import { Component, Input } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Phones } from '../phones';
 
 @Component({
   selector: 'app-phone-list-item',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './phone-list-item.component.html',
-  styleUrl: './phone-list-item.component.css'
+  styleUrls: ['./phone-list-item.component.css']
 })
 export class PhoneListItemComponent {
-  @Input() item?:Phones;
-
+  @Input() phone?: Phones;
 }

@@ -8,19 +8,11 @@
 </head>
 
 <body>
-<div style="border: 2px solid;">
-  <table>z
-    <tbody>
-    <tr *ngFor="let phone of phoneList" (click)="selectPhone(phone)">
-      <td>{{phone.company}}</td>
-      <td>{{phone.storage}}</td>
-      <td>{{phone.smartPhone ? 'Yes' : 'No'}}</td>
-      <td>{{phone.id}}</td>
-      <td>{{phone.name}}</td>
-    </tr>
-    </tbody>
-  </table>
+<div *ngFor="let phone of phoneList">
+  <app-phone-list-item [phone]="phone"></app-phone-list-item>
 </div>
+
+
 </body>
 
 </html>
