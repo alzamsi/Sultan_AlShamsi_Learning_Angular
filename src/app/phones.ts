@@ -3,5 +3,6 @@ export interface Phones {
   name: string;
   company: string;
   storage: number;
-  smartPhone?: boolean;
+  smartPhone: boolean;
+  imageUrl: string;
 }

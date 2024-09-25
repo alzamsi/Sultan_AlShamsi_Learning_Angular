@@ -1,13 +1,21 @@
 .even-item {
-  background-color: pink; /* Background color for even items */
+  background-color: pink;
 }
 
 .odd-item {
-  background-color: teal; /* Background color for odd items */
+  background-color: teal;
 }
 
 .phone-list-item {
-  padding: 10px; /* Adjust padding for better visibility */
-  border: 2px solid; /* Border for the item */
-  margin: 5px 0; /* Space between items */
+  padding: 10px;
+  border: 2px solid;
+  margin: 5px 0;
 }
+
+.phone-image {
+  width: 20rem;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
