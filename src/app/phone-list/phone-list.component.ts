@@ -12,9 +12,14 @@ import { PhoneListItemComponent } from '../phone-list-item/phone-list-item.compo
 })
 export class PhoneListComponent {
   phoneList: Phones[] = [
-    { id: 1, name: 'iPhone 13', company: 'Apple', storage: 128, smartPhone: true },
-    { id: 2, name: 'Galaxy S21', company: 'Samsung', storage: 256, smartPhone: true },
-    { id: 3, name: 'Pixel 6', company: 'Google', storage: 128, smartPhone: true },
-    { id: 4, name: 'Nokia 3310', company: 'Nokia', storage: 16, smartPhone: false }
+    {id: 1, name: 'iPhone 13', company: 'Apple', storage: 128, smartPhone: true},
+    {id: 2, name: 'Galaxy S21', company: 'Samsung', storage: 256, smartPhone: true},
+    {id: 3, name: 'Pixel 6', company: 'Google', storage: 128, smartPhone: true},
+    {id: 4, name: 'Nokia 3310', company: 'Nokia', storage: 16, smartPhone: false}
   ];
+  selectedPhone?: Phones;
+
+  selectPhone(phone: Phones): void {
+    this.selectedPhone = phone;
+  }
 }

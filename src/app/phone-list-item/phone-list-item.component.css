@@ -1,5 +1,13 @@
+.even-item {
+  background-color: pink; /* Background color for even items */
+}
+
+.odd-item {
+  background-color: teal; /* Background color for odd items */
+}
+
 .phone-list-item {
-  border: 2px solid;
-  padding: 10px;
-  margin: 10px 0;
+  padding: 10px; /* Adjust padding for better visibility */
+  border: 2px solid; /* Border for the item */
+  margin: 5px 0; /* Space between items */
 }

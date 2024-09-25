@@ -8,8 +8,19 @@
 </head>
 
 <body>
-<div *ngFor="let phone of phoneList">
-  <app-phone-list-item [phone]="phone"></app-phone-list-item>
+<div style="border: 2px solid;">
+  <table>
+    <tbody>
+    <tr *ngFor="let phone of phoneList; let i = index">
+      <td>
+        <app-phone-list-item
+          [phone]="phone"
+          [ngClass]="{'even-item': i % 2 === 0, 'odd-item': i % 2 !== 0}">
+        </app-phone-list-item>
+      </td>
+    </tr>
+    </tbody>
+  </table>
 </div>
 
 
