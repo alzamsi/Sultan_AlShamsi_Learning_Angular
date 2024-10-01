@@ -1,9 +1,8 @@
-import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';  // Import CommonModule for *ngFor
+import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { Phones } from '../phones';
 import { PhoneListItemComponent } from '../phone-list-item/phone-list-item.component';
-import {mockPhone} from "../mock-phone";
-import {PhoneService} from "../services/phone.service";  // Ensure you import child components if using standalone
+import { PhoneService } from "../services/phone.service";
 
 @Component({
   selector: 'app-phone-list',
@@ -12,13 +11,18 @@ import {PhoneService} from "../services/phone.service";  // Ensure you import ch
   templateUrl: './phone-list.component.html',
   styleUrls: ['./phone-list.component.css']
 })
-export class PhoneListComponent {
-  phoneList: Phones[] = mockPhone;
+export class PhoneListComponent implements OnInit {
+  phoneList: Phones[] = [];
   selectedPhone?: Phones;
 
-  constructor(private phoneService : PhoneService) { //dependency injection
+  constructor(private phoneService: PhoneService) { // Dependency injection
   }
 
+  ngOnInit() {
+    this.phoneService.getPhones().subscribe({
+      next: (data: Phones[]) => this.phoneList = data, error: err => console.error("Error fetching Phones", err), complete: () => console.log("Phone data fetch complete!")
+    });
+  }
 
   selectPhone(phone: Phones): void {
     this.selectedPhone = phone;
