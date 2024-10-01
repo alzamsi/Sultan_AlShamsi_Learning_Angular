@@ -12,7 +12,7 @@ import {PhoneListComponent} from "./phone-list/phone-list.component";
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Assignment 3';
+  title = 'Assignment 4';
 
 
 }
