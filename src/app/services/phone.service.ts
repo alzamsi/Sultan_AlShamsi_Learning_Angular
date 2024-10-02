@@ -12,7 +12,7 @@ export class PhoneService {
   constructor() {}
 
    getPhones(): Observable<Phones[]> {
-    return of(this.phones); // Return an observable that emits the phone data
+    return of(this.phones);
   }
 
    addPhone(newPhone: Phones): Observable<Phones[]> {
