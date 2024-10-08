@@ -1,6 +1,8 @@
-import { bootstrapApplication } from '@angular/platform-browser';
-import { appConfig } from './app/app.config';
-import { AppComponent } from './app/app.component';
+import { Routes } from '@angular/router';
+import {PhoneListComponent} from "./app/phone-list/phone-list.component";
+import {PhoneListItemComponent} from "./app/phone-list-item/phone-list-item.component";
 
-bootstrapApplication(AppComponent, appConfig)
-  .catch((err) => console.error(err));
+export const routes: Routes = [
+  { path: 'phones', component: PhoneListComponent },
+  { path: 'phones/:id', component: PhoneListItemComponent}
+];
