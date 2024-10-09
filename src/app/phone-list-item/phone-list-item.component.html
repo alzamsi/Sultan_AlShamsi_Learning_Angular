@@ -1,11 +1,6 @@
-
-
-
-
-
-<div  *ngIf="phone" class="phone-list-item" >
+<div *ngIf="phone" class="phone-list-item">
   <img [src]="phone.imageUrl" alt="{{ phone.name }}" class="phone-image" />
-  <h2>{{ phone.name }}</h2>
+   <h2>{{ phone.name }}</h2>
   <p><strong>ID:</strong> {{ phone.id }}</p>
   <p><strong>Company:</strong> {{ phone.company }}</p>
   <p><strong>Storage (GB):</strong> {{ phone.storage }}</p>

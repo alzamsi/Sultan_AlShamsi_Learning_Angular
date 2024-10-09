@@ -8,9 +8,17 @@
 </head>
 <body>
 
- <app-phone-list-item [phone]="selectedPhone"></app-phone-list-item>
-
- <app-phone-list></app-phone-list>
+<div class="nav-bar">
+  <<nav>
+  <ul>
+    <a routerLink="/">Home</a>
+    <a routerLink="/modify-student" >Modify List Item</a>
+  </ul>
+</nav>
+  <div class="content">
+  <router-outlet></router-outlet>
+  </div>
+</div>
 </body>
 
 </html>

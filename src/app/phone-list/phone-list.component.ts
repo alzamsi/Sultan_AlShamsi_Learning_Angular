@@ -3,11 +3,12 @@ import { CommonModule } from '@angular/common';
 import { Phones } from '../phones';
 import { PhoneListItemComponent } from '../phone-list-item/phone-list-item.component';
 import { PhoneService } from "../services/phone.service";
+import {RouterOutlet} from "@angular/router";
 
 @Component({
   selector: 'app-phone-list',
   standalone: true,
-  imports: [CommonModule, PhoneListItemComponent],
+  imports: [CommonModule, PhoneListItemComponent, RouterOutlet],
   templateUrl: './phone-list.component.html',
   styleUrls: ['./phone-list.component.css']
 })

@@ -6,17 +6,22 @@
   background-color: teal;
 }
 
-
 .phone-list-item {
-  padding: 10px;
-  border: 2px solid;
-  margin: 5px 0;
+  border: 1px solid #ccc; /* Light gray border */
+  border-radius: 8px; /* Rounded corners */
+  padding: 16px; /* Padding inside the item */
+  margin: 20px 0; /* Margin between items */
+  text-align: center; /* Center the text */
+ }
+
+.phone-image {
+  width: 100%; /* Responsive image */
+  max-width: 300px; /* Max width for the image */
+  border-radius: 8px; /* Rounded corners for the image */
 }
 
+
 *{
-  width: 20rem;
-  height: auto;
-  border-radius: 4px;
-  margin-bottom: 8px;
+  align-items: center;
 }
 
