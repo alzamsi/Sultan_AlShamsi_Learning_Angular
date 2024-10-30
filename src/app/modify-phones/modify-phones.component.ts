@@ -27,8 +27,8 @@ export class ModifyPhoneComponent implements OnInit {
     private router: Router
   ) {
     this.phoneForm = this.fb.group({
-      id: ['', Validators.required,Validators.max(99)],
-      name: ['', Validators.required,Validators.pattern('[Aa-Zz]*')],
+      id: ['', Validators.required],
+      name: ['', Validators.required],
       company: ['', Validators.required],
       price: ['', [Validators.required, Validators.min(0)]],
       storage: [''],
