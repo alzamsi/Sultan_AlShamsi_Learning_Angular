@@ -1,0 +1,17 @@
+<form [formGroup]="phoneForm" (ngSubmit)="onSubmit()">
+  <label for="id">ID</label>
+  <input id="id" formControlName="id" type="number" />
+
+  <label for="name">Name</label>
+  <input id="name" formControlName="name" type="text" />
+
+  <label for="company">Company</label>
+  <input id="company" formControlName="company" type="text" />
+
+  <label for="storage">Storage</label>
+  <input id="storage" formControlName="storage" type="number" />
+
+  <button type="submit">Submit</button>
+  <button type="button" (click)="phoneForm.reset()">Reset</button>
+  <button type="button" (click)="navigateToPhoneList()">Back to List</button>
+</form>
