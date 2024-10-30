@@ -10,8 +10,8 @@ const routes: Routes = [
   {path:'', redirectTo: '/phones', pathMatch: 'full'},
   { path: 'phones', component: PhoneListComponent },
   { path: 'phones/:id', component: PhoneListItemComponent },
-  {path:'modify-student/:id', component: ModifyPhoneComponent},
-  {path:'modify-student',component:ModifyPhoneComponent},
+  {path:'modify-phones/:id', component: ModifyPhoneComponent},
+  {path:'modify-phones',component:ModifyPhoneComponent},
   {path: '**', component:PageNotFoundComponent}
 
 ];

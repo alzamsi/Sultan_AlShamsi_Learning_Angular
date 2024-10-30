@@ -40,7 +40,7 @@ export class PhoneListComponent implements OnInit {
 
 
   onEdit(phoneId: any): void {
-     this.router.navigate(['/modify-student',phoneId]);
+     this.router.navigate(['/modify-phones',phoneId]);
 
   }
 }
