@@ -14,4 +14,5 @@
   <button type="submit">Submit</button>
   <button type="button" (click)="phoneForm.reset()">Reset</button>
   <button type="button" (click)="navigateToPhoneList()">Back to List</button>
+  <div *ngIf="error" class="error">{{ error }}</div>
 </form>

@@ -15,14 +15,20 @@ import { RouterOutlet, Router } from "@angular/router";
 export class PhoneListComponent implements OnInit {
   phoneList: Phones[] = [];
   selectedPhone?: Phones;
+  error: string | null = null;
 
-  constructor(private phoneService: PhoneService, private router: Router) { // Dependency injection
-  }
+  constructor(private phoneService: PhoneService, private router: Router) {}
 
   ngOnInit() {
     this.phoneService.getPhones().subscribe({
-      next: (data: Phones[]) => this.phoneList = data,
-      error: err => console.error("Error fetching Phones", err),
+      next: (data: Phones[]) => {
+        this.phoneList = data;
+        this.error = null;
+      },
+      error: (err) => {
+        this.error = 'Error fetching phones';
+        console.error("Error fetching phones", err);
+      },
       complete: () => console.log("Phone data fetch complete!")
     });
   }
@@ -31,17 +37,19 @@ export class PhoneListComponent implements OnInit {
     this.selectedPhone = phone;
   }
 
-
-
-  onDelete(phoneId: any): void {
-    this.phoneService.deletePhone(phoneId);
-     this.phoneList = this.phoneList.filter(phone => phone.id !== phoneId);
+  onDelete(phoneId: number): void {
+    this.phoneService.deletePhone(phoneId).subscribe({
+      next: () => {
+        this.phoneList = this.phoneList.filter(phone => phone.id !== phoneId);
+      },
+      error: (err) => {
+        this.error = 'Error deleting phone';
+        console.error("Error deleting phone", err);
+      }
+    });
   }
 
-
-  onEdit(phoneId: any): void {
-     this.router.navigate(['/modify-phones',phoneId]);
-
+  onEdit(phoneId: number): void {
+    this.router.navigate(['/modify-phones', phoneId]);
   }
 }
-

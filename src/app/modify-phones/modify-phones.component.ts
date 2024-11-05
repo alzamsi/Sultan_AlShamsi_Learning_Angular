@@ -4,6 +4,7 @@ import { ActivatedRoute, Router } from "@angular/router";
 import { NgIf } from "@angular/common";
 import { Phones } from '../phones';
 import { PhoneService } from '../services/phone.service';
+import {error} from "@angular/compiler-cli/src/transformers/util";
 
 @Component({
   selector: 'app-modify-phone',
@@ -70,4 +71,6 @@ export class ModifyPhoneComponent implements OnInit {
   navigateToPhoneList(): void {
     this.router.navigate(['/phones']);
   }
+
+  protected readonly error = error;
 }
