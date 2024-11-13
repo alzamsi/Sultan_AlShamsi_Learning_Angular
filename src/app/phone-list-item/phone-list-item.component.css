@@ -1,27 +1,23 @@
-.even-item {
-  background-color: pink;
+.phone-list {
+  width: 100%;
+  border-collapse: collapse;
 }
 
-.odd-item {
-  background-color: teal;
+.phone-list th, .phone-list td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
 }
 
-.phone-list-item {
-  border: 1px solid #ccc; /* Light gray border */
-  border-radius: 8px; /* Rounded corners */
-  padding: 16px; /* Padding inside the item */
-  margin: 20px 0; /* Margin between items */
-  text-align: center; /* Center the text */
- }
+.phone-list th {
+  background-color: #f2f2f2;
+}
 
 .phone-image {
-  width: 100%; /* Responsive image */
-  max-width: 300px; /* Max width for the image */
-  border-radius: 8px; /* Rounded corners for the image */
+  width: 50px; /* Adjust the size as needed */
+  height: auto;
 }
-
-
-*{
-  align-items: center;
+.phone-image {
+  width: 50px; /* Adjust the size as needed */
+  height: auto;
 }
-
