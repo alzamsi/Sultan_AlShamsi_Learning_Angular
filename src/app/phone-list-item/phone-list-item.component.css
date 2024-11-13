@@ -1,23 +1,29 @@
 .phone-list {
   width: 100%;
-  border-collapse: collapse;
+  border-collapse: collapse; /* Ensures that borders are collapsed into a single border */
+  margin: 20px 0; /* Adds some space above and below the table */
+  font-family: Arial, sans-serif; /* Sets a clean font for the table */
 }
 
 .phone-list th, .phone-list td {
-  border: 1px solid #ddd;
-  padding: 8px;
-  text-align: left;
+  border: 1px solid #ddd; /* Light gray border for table cells */
+  padding: 12px; /* Adds padding inside the cells for better spacing */
+  text-align: left; /* Aligns text to the left */
 }
 
 .phone-list th {
-  background-color: #f2f2f2;
+  background-color: #f2f2f2; /* Light gray background for header */
+  color: #333; /* Darker text color for header */
+  font-weight: bold; /* Makes header text bold */
 }
 
-.phone-image {
-  width: 50px; /* Adjust the size as needed */
-  height: auto;
+.phone-list tr:nth-child(even) {
+  background-color: #f9f9f9; /* Light background for even rows */
 }
+
+
 .phone-image {
-  width: 50px; /* Adjust the size as needed */
-  height: auto;
+  width: 50px; /* Fixed width for images */
+  height: auto; /* Maintains aspect ratio */
+  border-radius: 5px; /* Rounds the corners of the image */
 }

@@ -1,47 +1,47 @@
 form {
-  max-width: 500px;
-  margin: 0 auto;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  background-color: #f9f9f9;
-}
-
-.form-group {
-  margin-bottom: 15px;
+  max-width: 600px; /* Sets a maximum width for the form */
+  margin: 20px auto; /* Centers the form horizontally */
+  padding: 20px; /* Adds padding inside the form */
+  border: 1px solid #ddd; /* Light gray border around the form */
+  border-radius: 5px; /* Rounds the corners of the form */
+  background-color: #f9f9f9; /* Light background color for the form */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
 label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
+  display: block; /* Makes labels block elements */
+  margin-bottom: 5px; /* Adds space below each label */
+  font-weight: bold; /* Makes label text bold */
 }
 
-input[type="text"],
-input[type="number"] {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 14px;
+input {
+  width: 100%; /* Makes input fields take the full width */
+  padding: 10px; /* Adds padding inside input fields */
+  margin-bottom: 15px; /* Adds space below each input field */
+  border: 1px solid #ccc; /* Light gray border for input fields */
+  border-radius: 4px; /* Rounds the corners of input fields */
+  box-sizing: border-box; /* Ensures padding is included in width */
 }
 
 button {
-  padding: 10px 15px;
-  margin-right: 10px;
-  border: none;
-  border-radius: 4px;
-  background-color: #007bff;
-  color: white;
-  cursor: pointer;
-  font-size: 14px;
+  padding: 10px 15px; /* Adds padding inside buttons */
+  margin-right: 10px; /* Adds space between buttons */
+  border: none; /* Removes default border */
+  border-radius: 4px; /* Rounds the corners of buttons */
+  background-color: #007bff; /* Bootstrap primary color */
+  color: white; /* White text color */
+  cursor: pointer; /* Changes cursor to pointer on hover */
+  transition: background-color 0.3s; /* Smooth transition for background color */
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #0056b3; /* Darker shade on hover */
 }
 
-.error {
-  color: red;
-  margin-top: 10px;
+button[type="button"] {
+  background-color: #6c757d; /* Secondary button color */
+}
+
+button[type="button"]:hover {
+  background-color: #5a6268; /* Darker shade on hover for secondary button */
 }

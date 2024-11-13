@@ -1,14 +1,6 @@
-/* Add some spacing between elements */
-h2 {
-  margin-bottom: 10px;
-}
-
-p {
-  margin: 5px 0;
-}
 
 .nav-bar {
-  background-color: #333; /* Dark background for the navbar */
+  background-color: wheat; /* Dark background for the navbar */
   padding: 10px;
 }
 
@@ -33,10 +25,4 @@ p {
   transition: background-color 0.3s ease;
 }
 
-.nav-bar a:hover {
-  background-color: #666; /* Gray color on hover */
-}
 
-.div {
-  align-items: center; /* Center content within the div */
-}
