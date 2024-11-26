@@ -4,6 +4,7 @@ import { ActivatedRoute, Router } from "@angular/router";
 import { NgIf } from "@angular/common";
 import { Phones } from '../phones';
 import { PhoneService } from '../services/phone.service';
+import {HoverHighlightDirective} from "../directives/hover-highlight.directive";
 
 @Component({
   selector: 'app-modify-phone',
@@ -11,7 +12,8 @@ import { PhoneService } from '../services/phone.service';
   imports: [
     FormsModule,
     NgIf,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HoverHighlightDirective
   ],
   templateUrl: './modify-phones.component.html',
   styleUrls: ['./modify-phones.component.css']

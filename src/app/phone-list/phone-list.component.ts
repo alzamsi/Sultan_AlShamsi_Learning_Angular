@@ -4,11 +4,12 @@ import { Phones } from '../phones';
 import { PhoneListItemComponent } from '../phone-list-item/phone-list-item.component';
 import { PhoneService } from "../services/phone.service";
 import { RouterOutlet, Router } from "@angular/router";
+import {HoverHighlightDirective} from "../directives/hover-highlight.directive";
 
 @Component({
   selector: 'app-phone-list',
   standalone: true,
-  imports: [CommonModule, PhoneListItemComponent, RouterOutlet],
+  imports: [CommonModule, PhoneListItemComponent, RouterOutlet, HoverHighlightDirective],
   templateUrl: './phone-list.component.html',
   styleUrls: ['./phone-list.component.css']
 })
